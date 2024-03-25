@@ -15,7 +15,7 @@ services:
       - app
 
   project-app:
-    image: kalyankumar13/project-app
+    image: kalyankumar13/spring-projectimage:latest
     container_name: project-app
     depends_on:
       - mysql
