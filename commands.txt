@@ -1,0 +1,5 @@
+ 
+To run mysql container
+docker run -d --network app --name mysql  -e MYSQL_ROOT_PASSWORD=1234 -e MYSQL_DATABASE=sys --mount source=vol,target=/var/lib/mysql  -p 3308:3306 mysql
+
+docker run --network app -e MYSQL_HOST=mysql -e MYSQL_PORT=3306 -p 8080:8080 -d project-app
