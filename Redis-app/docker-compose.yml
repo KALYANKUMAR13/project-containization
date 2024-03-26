@@ -1,0 +1,21 @@
+version: '3'
+
+services:
+  web:
+    build: ./app.py
+    ports:
+      - "5000:5000"
+    depends_on:
+      - redis
+    environment:
+      REDIS_HOST: redis
+
+  redis:
+    image: redis:latest
+    ports:
+      - "6379:6379"
+    container_name: redis
+
+  # networks:
+  # my_network:
+  #   app:  
