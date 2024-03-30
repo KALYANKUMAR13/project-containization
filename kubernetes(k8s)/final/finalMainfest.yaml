@@ -57,10 +57,6 @@ spec:
       labels:
         app: project-app
     spec:
-      initContainers:   # Adding initContainers section
-      - name: wait-for-mysql
-        image: busybox
-        command: ['sh', '-c', 'until nc -z mysql 3306; do echo "Waiting for MySQL service"; sleep 5; done;']
       containers:
       - name: project-app
         image: kalyankumar13/spring-projectimage:latest
