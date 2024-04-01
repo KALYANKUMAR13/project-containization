@@ -1,0 +1,6 @@
+mysql:
+  rootPassword: "1234"
+  database: "sys"
+
+projectApp:
+  image: "kalyankumar13/spring-projectimage:latest"
