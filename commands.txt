@@ -14,7 +14,7 @@ docker swarm leave --force
 To list the service in namespace argocd
 minikube service list -n argocd
 
-Port-forwarding the service with minikube
+Port-forwarding the service with Minikube
 minikube service argocd-server -n argocd
 
 list the file name, to get the secret
