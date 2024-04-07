@@ -1,0 +1,8 @@
+To create a managed cluster in EKS
+eksctl create cluster --name <clusterName> --region us-east-1 --fargate
+
+We can deploy the manifest into cluster
+kubectl apply -f https://raw.githubusercontent.com/kubernetes-sigs/aws-load-balancer-controller/v2.5.4/docs/examples/2048/2048_full.yaml
+
+IAM OIDC provider configure-> to access the resources and cluster vice-cersa
+eksctl utils associate-iam-oidc-provider --cluster $cluster_name --approve
