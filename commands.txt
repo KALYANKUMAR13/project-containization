@@ -22,3 +22,11 @@ kubectl get secret -n argocd
 
 Password for Argocd login
 kubectl edit secret argocd-initial-admin-secret -n argocd
+
+
+--------------------
+
+
+ helm install wordpress-db . -n wpdb -f dev/values.yaml --create-namespace
+
+helm install <helm name> 
