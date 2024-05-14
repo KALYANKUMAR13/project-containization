@@ -1,4 +1,6 @@
 Why monitoring?
+
+
 Managing a Single cluster is easy. 
 If multiple teams access the particular cluster, problem may arise 
 We may have different EENVIRONMENTS such as dev, Prod and Staging
