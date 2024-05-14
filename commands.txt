@@ -30,3 +30,13 @@ kubectl edit secret argocd-initial-admin-secret -n argocd
  helm install wordpress-db . -n wpdb -f dev/values.yaml --create-namespace
 
 helm install <helm name> 
+
+-----------------------------------------------------
+
+
+In Docker, 
+CMD vs RUN
+RUN - while building the image
+CMD - WHile running the image that( in Dockerfile)
+
+ENTRYPOIN - This one has high preference, when compared to CMD. So If we give mutiple commands, ENTRYPOINT will take highest preference.
