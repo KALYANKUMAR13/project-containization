@@ -39,4 +39,7 @@ CMD vs RUN
 RUN - while building the image
 CMD - WHile running the image that( in Dockerfile)
 
-ENTRYPOIN - This one has high preference, when compared to CMD. So If we give mutiple commands, ENTRYPOINT will take highest preference.
+ENTRYPOINT - This one has high preference, when compared to CMD. So If we give mutiple commands, ENTRYPOINT will take highest preference.
+
+ENV - values can't be over riden in CLi, 
+In ARG, we can override the values in CLi, while running the image.
