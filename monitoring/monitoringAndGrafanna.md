@@ -1,6 +1,11 @@
 Add helm repo
 helm repo add prometheus-community https://prometheus-community.github.io/helm-charts
 
+Add helm repo for prometheus
+```
+helm repo add prometheus-community https://prometheus-community.github.io/helm-charts
+```
+
 Install helm for Prometheus
 ```
 helm install prometheus prometheus-community/prometheus
@@ -32,11 +37,14 @@ Grafanna - Data visualization
 Gets the data(data source) from Prometheus and makes a visualization  
 
 Add helm repo
+```
 helm repo add grafana https://grafana.github.io/helm-charts
+```
 
-Install helm 
-helm install grafana grafana/grafana
-
+Install helm for grafanna
+```
+helm install grafana grafana/grafanna
+```
 kubectl expose service grafana --type=NodePort --target-port=3000 --name=grafanna-ext
 
 
