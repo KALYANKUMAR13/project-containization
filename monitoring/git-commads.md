@@ -10,10 +10,10 @@ git add -f <filename>
 
 To commit 
 ```
-git commit -m "Commit message:
+git commit -m "Commit message"
 ```
 
-To have history of commits and its message, commidId, date and time
+To have history of commits and their message, commitId, date, and time
 ```
 git log
 ```
@@ -24,3 +24,37 @@ git reset ---hard <commitId>
 ```
 
 
+master(up to date) - feature - release, branches
+ hotfix -->to master and release branches
+
+
+To create a new branch and switch to new one
+```
+git checkout -b "BranchName"
+```
+
+To check the current(working) branch, Star is mentioned on the current branch
+```
+git branch
+```
+
+To merge, Go to the branch that should be merged to,
+During the merge, conflict occurs, resolve any Merge Conflicts (if any): If there are any merge conflicts, Git will prompt you to resolve them. You can open the conflicting files, resolve the conflicts, and then add and commit the changes. 
+```
+git merge <BranchName>
+git push origin master
+```
+
+To delete the branch
+```
+git branch -d <BranchName>
+```
+
+If the branch contains changes that have not been merged to ,
+```
+git branch -D <BranchName>
+```
+and 
+```
+git push origin --delete <BranchName>
+```
