@@ -33,3 +33,9 @@ To know the paths that we wrote manifest for ingress and nginx-controller able t
 ```
 kubectl describe ingress ingress
 ```
+
+
+to Delete all resources in a particular namespace
+```
+kubectl delete all --all -n <Namespace>
+```
