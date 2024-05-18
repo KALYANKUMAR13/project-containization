@@ -58,3 +58,9 @@ and
 ```
 git push origin --delete <BranchName>
 ```
+
+Configuring username and email
+```
+git config --global user.name "Your Name"
+git config --global user.email "your_email@example.com"
+```
