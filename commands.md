@@ -3,29 +3,57 @@ To run mysql container
 ```
 docker run -d --network app --name mysql  -e MYSQL_ROOT_PASSWORD=1234 -e MYSQL_DATABASE=sys --mount source=vol,target=/var/lib/mysql  -p 3308:3306 mysql
 ```
-TO run app
+
+To run a app(Soring boot, that needs mysql, So mysql is as a docker container in the previous step
 ```
 docker run --network app -e MYSQL_HOST=mysql -e MYSQL_PORT=3306 -p 8080:8080 -d project-app
 ```
 ------------------------------------
-Docker Swarm
-
+For Docker Swarm Implementation of the same application
+```
 docker swarm init 
+```
+To deploy the file 
+```
 docker stack deploy -c <filename> <stack_name>
+```
+
+To leave from the cluster
+```
 docker swarm leave --force
+```
 
 ---------------------------
-To list the service in namespace argocd
+ArgoCD in minikube,
+Create a namespace for all the services
+```
+kubectl create namespace argocd
+```
+
+Install the manifest
+```
+kubectl apply -n argocd -f https://raw.githubusercontent.com/argoproj/argo-cd/stable/manifests/install.yaml
+```
+
+
+To list the service in namespace argocd:
+```
 minikube service list -n argocd
+```
 
 Port-forwarding the service with Minikube
+```
 minikube service argocd-server -n argocd
+```
 
 list the file name, to get the secret
+```
 kubectl get secret -n argocd
-
+```
 Password for Argocd login
+```
 kubectl edit secret argocd-initial-admin-secret -n argocd
+```
 
 
 --------------------
