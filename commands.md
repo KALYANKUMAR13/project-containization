@@ -1,0 +1,49 @@
+ 
+To run mysql container
+```
+docker run -d --network app --name mysql  -e MYSQL_ROOT_PASSWORD=1234 -e MYSQL_DATABASE=sys --mount source=vol,target=/var/lib/mysql  -p 3308:3306 mysql
+```
+TO run app
+```
+docker run --network app -e MYSQL_HOST=mysql -e MYSQL_PORT=3306 -p 8080:8080 -d project-app
+```
+------------------------------------
+Docker Swarm
+
+docker swarm init 
+docker stack deploy -c <filename> <stack_name>
+docker swarm leave --force
+
+---------------------------
+To list the service in namespace argocd
+minikube service list -n argocd
+
+Port-forwarding the service with Minikube
+minikube service argocd-server -n argocd
+
+list the file name, to get the secret
+kubectl get secret -n argocd
+
+Password for Argocd login
+kubectl edit secret argocd-initial-admin-secret -n argocd
+
+
+--------------------
+
+
+ helm install wordpress-db . -n wpdb -f dev/values.yaml --create-namespace
+
+helm install <helm name> 
+
+-----------------------------------------------------
+
+
+In Docker, 
+CMD vs RUN
+RUN - while building the image
+CMD - WHile running the image that( in Dockerfile)
+
+ENTRYPOINT - This one has high preference, when compared to CMD. So If we give mutiple commands, ENTRYPOINT will take highest preference.
+
+ENV - values can't be over riden in CLi, 
+In ARG, we can override the values in CLi, while running the image.
