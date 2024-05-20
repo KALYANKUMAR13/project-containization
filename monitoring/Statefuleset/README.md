@@ -39,3 +39,18 @@ It should be there.
 ```
 kubectl exec -it mysql-0 -- mysql -u root -p -e "SHOW DATABASES;"
 ```
+If you deleted statefulset, persistent volumes and persistent volume cliams will not deleted unlike deployment, 
+So get persistent volume  and delete it
+```
+kubectl get pvc
+kubectl get pv
+```
+To delete all pvc and pv or else, delete by name based on needs
+```
+kubectl delete pvc --all
+kubectl delete pv --all
+```
+
+A Persistent Volume (PV) is a piece of storage in the cluster that has been provisioned by an administrator or dynamically provisioned using StorageClasses. PVs are a cluster resource, similar to a node, and they have a lifecycle that is independent of any individual pod that uses the PV.
+
+A Persistent Volume Claim (PVC) is a request for storage by a user. PVCs are used by pods to request specific amounts and types of storage. The PVC specifies the desired storage capacity, access modes, and optionally the storage class. When a PVC is created, Kubernetes looks for a suitable PV that meets the claim's requirements and binds the PVC to that PV.
