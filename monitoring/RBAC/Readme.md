@@ -18,7 +18,7 @@ Command to get the PROJECT_ID from cli:
 gcloud config get-value project
 ```
 
-next, We can grant view role to that.
+next, We can grant view role to that., (similar to cicd project ami)
 ```
 gcloud projects add-iam-policy-binding [PROJECT_ID] \
 --member="serviceAccount:tester-service-account@[PROJECT_ID].iam.gserviceaccount.com" \
