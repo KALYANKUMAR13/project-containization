@@ -19,7 +19,7 @@ The below command will displays the database in mysql pod.
 SHOW DATABASES;
 ```
 
-To check persistant volumes is working, we are creating a db named example in pod-0 and deleting it. But statefulset recreate the pod and it should attach to particulat volume
+To check persistant volumes is working, we are creating a db named example in pod-0 and deleting it. But statefulset recreate the pod and it should attach to particular volume
 ```
 kubectl exec -it mysql-0 -- mysql -u root -p -e "CREATE DATABASE example;"
 ```
@@ -54,3 +54,5 @@ kubectl delete pv --all
 A Persistent Volume (PV) is a piece of storage in the cluster that has been provisioned by an administrator or dynamically provisioned using StorageClasses. PVs are a cluster resource, similar to a node, and they have a lifecycle that is independent of any individual pod that uses the PV.
 
 A Persistent Volume Claim (PVC) is a request for storage by a user. PVCs are used by pods to request specific amounts and types of storage. The PVC specifies the desired storage capacity, access modes, and optionally the storage class. When a PVC is created, Kubernetes looks for a suitable PV that meets the claim's requirements and binds the PVC to that PV.
+
+Statefulset -> PVC -> StorageClass -> Provisioner -> PV
