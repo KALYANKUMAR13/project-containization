@@ -26,6 +26,7 @@ Node Affinity
 
 
 Taint
+
 We have a nodes in cluster, If we don't want to deploy a particular node, that is taint.
 Purpose, We have mulltiple node for prod, 
 A new k8s version has been released, if want to update the node, we will be doing each node, so that production is not distrubed
