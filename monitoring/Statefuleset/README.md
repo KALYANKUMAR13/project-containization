@@ -57,4 +57,4 @@ A Persistent Volume Claim (PVC) is a request for storage by a user. PVCs are use
 
 Statefulset -> PVC -> StorageClass -> Provisioner -> PV
 
-If we want to use external storage class, CSI Container Storage Interface will be provided by particular storage to use in k8s cluster .
+If we want to use external storage class like netApp , CSI Container Storage Interface will be provided by particular storage to use in k8s cluster. We can install through helm charts
