@@ -15,8 +15,12 @@ canary - we are directing 10% of traffic to new version and checking, eventually
 Kiali is well integrated with istio, keep track of service to service communication.
 
 **How**
-Istio provides a container to all pod, whichever namespace it has access to. That container is called side-car container. The side-car container has Envoy proxy application.
+Istio provides a container to all pod, whichever namespace it has access to. That container is called side-car container. 
+
+The side-car container has Envoy proxy application.
+
 This proxy service, manages the traffic of the pod(ALL inbound and outbound traffic) OBSERVABILITY.
+
 All the side-car containers sends the information to the IstioD(primary component of Istio, keep track of this obervability.
 
 Communication between Istio and API server in k8s cluster -> Admission Controller 
@@ -39,6 +43,27 @@ Add a namespace label to instruct Istio to automatically inject Envoy sidecar pr
  kubectl label namespace default istio-injection=enabled
 ```
 
-For demo, istio gave a example to practice
-[Link for the demo, provided by Istio](https://istio.io/latest/docs/examples/bookinfo/)
 
+[Link for the example , provided by Istio](https://istio.io/latest/docs/examples/bookinfo/)
+
+Go to inside the Istio resource folder, where samples folder is present and deploy the application
+```
+kubectl apply -f samples/bookinfo/platform/kube/bookinfo.yaml
+```
+If, you can't see the pods, the  automatic sidecar injection during installation is disabled and rely on manual sidecar injection, use the istioctl kube-inject command to modify the bookinfo.yaml file before deploying your application.
+```
+kubectl apply -f <(istioctl kube-inject -f samples/bookinfo/platform/kube/bookinfo.yaml)
+```
+if the folder does not have full access, the above command will be executed fully and sidecar injection is not done.
+
+In Windows system, 
+Run istioctl kube-inject and Save the Output Using Redirection:
+```
+istioctl kube-inject -f samples/bookinfo/platform/kube/bookinfo.yaml > bookinfo-injected.yaml
+```
+A new file is generated in the current folder. Deploy the current generated file to the k8s cluster, you can see sidecar container in each pod.
+
+If you are using gke, auto pilot, we need to enable the service mesh capabalities to the k8s cluster by the following command .
+```
+gcloud container clusters update <ClusterName> --region <RegionName> --workload-policies=allow-net-admin
+```
