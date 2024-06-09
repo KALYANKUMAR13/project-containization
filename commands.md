@@ -75,3 +75,6 @@ ENTRYPOINT - This one has high preference, when compared to CMD. So If we give m
 
 ENV - values can't be over riden in CLi, 
 In ARG, we can override the values in CLi, while running the image.
+
+
+Distroless Images, -> it has only runtime. When we use this, we are not having any vulnerability with other stuffs to the image.
