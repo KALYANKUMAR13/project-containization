@@ -75,6 +75,8 @@ ENTRYPOINT - This one has high preference, when compared to CMD. So If we give m
 
 ENV - values can't be over riden in CLi, 
 In ARG, we can override the values in CLi, while running the image.
+
+
 Precedence Rules
 When both ENTRYPOINT and CMD are specified in a Dockerfile, CMD serves as the default arguments to the ENTRYPOINT instruction.
 If you run the container with additional arguments, those arguments will override the CMD instruction but will be appended to the ENTRYPOINT.
