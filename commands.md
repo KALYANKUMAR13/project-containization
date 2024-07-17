@@ -84,3 +84,6 @@ If you run the container with additional arguments, those arguments will overrid
 
 
 Distroless Images, -> it has only runtime. When we use this, we are not having any vulnerability with other stuffs to the image.
+
+https://www.docker.com/blog/docker-best-practices-choosing-between-run-cmd-and-entrypoint/
+
