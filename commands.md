@@ -87,3 +87,7 @@ Distroless Images, -> it has only runtime. When we use this, we are not having a
 
 https://www.docker.com/blog/docker-best-practices-choosing-between-run-cmd-and-entrypoint/
 
+**Distroless Images**
+
+These are minimal docker images, that have NECESSARY dependencies to run the applications.  For example, for a python distro-less image, the image has only python run-time, Not even other basic dependencies like curl, wget.
+
