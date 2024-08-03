@@ -6,7 +6,7 @@ By default, tsdb stores for 15 days, but it can be increased with further config
 
 ![Screenshot (84)](https://github.com/user-attachments/assets/a496ed4b-b265-4933-8083-189379936e3c)
 
-Instrumentation:
+**Instrumentation:**
 
 Writing custom code to collect metrics form particular service.
 
@@ -35,6 +35,11 @@ For the above challenge, service discovery takes care the pod creation and delet
 By default, the port is 9090 for visualizing it 
 
 ![Screenshot (87)](https://github.com/user-attachments/assets/a2e34fc9-dd36-45c2-9bcd-d8dadae99054)
+
+Alert manager.
+Here we need t write , when some certain conditions are meet, notification is triggered
+![Screenshot (88)](https://github.com/user-attachments/assets/68e0e872-1ae3-4b3e-98a0-19c37a8aedad)
+
 
 
  
