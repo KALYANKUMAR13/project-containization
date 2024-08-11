@@ -46,7 +46,7 @@ The more we have above 3 principles in our code, the more we can discover the is
 **Metrics** : Quantitative measurements that offer a snapshot of a system's performance over time. This includes numerical values like response time, error rate and response time
 Metrics is collected by k8s nodes, service, pods.
 
-**Traces** : Traces helps to understand the flow and improve in future.
+**Traces** : in mirocservice, one service to another service  Traces helps to understand the flow and improve in future.
 
 In monitoring, "traces" refer to the detailed records of the execution flow of requests through a distributed system. They provide insights into how requests propagate through various services, applications, or components within an architecture. Tracing is an essential part of observability, which also includes metrics and logs.
 
