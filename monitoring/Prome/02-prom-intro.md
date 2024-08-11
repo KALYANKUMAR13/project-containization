@@ -2,6 +2,8 @@ What is a metric:
 
 A key indicator, and tells how a system behaves
 
+Collecting metrics from target, target are k8s cluster, db server
+
 ![Screenshot (81)](https://github.com/user-attachments/assets/51e2ee8e-d91c-4c14-bb13-b744d178ac86)
 
 Timeseries data -
