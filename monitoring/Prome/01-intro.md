@@ -28,7 +28,8 @@ Observing all can't be efficient. Tracking based upon on applications.
 
 **Saturation** : This measures the resource utilization of CPU, memory, and hard disk. This helps to eliminate the performance degradation of a server.
 
-<img width="476" alt="image" src="https://github.com/user-attachments/assets/b9802bb3-b37e-4031-a087-6d34e419e2ff">
+<img width="887" alt="image" src="https://github.com/user-attachments/assets/70764fc2-7f81-4603-94fb-09dd68101a81">
+
 
 **O11y -> Observability**
 
