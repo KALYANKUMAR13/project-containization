@@ -18,3 +18,6 @@ RedHat
 
 Single Node OpenShift (SNO) cluster, if we have 70 concurrent users but 64 RAm and CPU
 
+<img width="680" alt="image" src="https://github.com/user-attachments/assets/cacee92a-8ef8-4f13-89a6-8d954aeec83a">
+
+
