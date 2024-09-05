@@ -11,3 +11,10 @@ Enterprise K8s: Redhat(OpenShift), EKS, AKS, GKE, Rancher.
 Openshift has 2 modes, 
 
 1.Self-managed - This is similar to open-source k8s
+
+---------------
+
+RedHat 
+
+Single Node OpenShift (SNO) cluster, if we have 70 concurrent users but 64 RAm and CPU
+
